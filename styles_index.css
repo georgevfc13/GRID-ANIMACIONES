@@ -1,0 +1,47 @@
+body{
+    background: #f0f0f0;
+    height: 100vh;
+    margin: 0;
+}
+
+.tarjeta_general{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .tarjeta {
+        width: 90vw;
+        height: 60vw;
+        max-width: 320px;
+        max-height: 400px;
+    }
+}
+
+.tarjeta {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.contenedor_imagen {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
+}
+
+.contenedor_imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.contenedor_imagen:hover img{
+    transform: scale(1.05);
+}
