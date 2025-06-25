@@ -45,3 +45,37 @@ body{
 .contenedor_imagen:hover img{
     transform: scale(1.05);
 }
+
+.texto-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 12px 24px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.contenedor_imagen {
+    position: relative; /* Añadido para posicionar el h2 */
+}
+
+.contenedor_imagen:hover .texto-hover {
+    opacity: 1;
+}
+
+.contenedor_imagen {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform-style: preserve-3d;
+    position: relative;
+}
