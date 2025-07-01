@@ -36,3 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sombra inicial
     card.style.boxShadow = '0 10px 30px 0 rgba(0,0,0,0.15)';
 });
+
+// Botón para ir a la parte superior
+window.addEventListener('scroll', function() {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    if (this.scrollY > 200) {
+        scrollTopBtn.style.display = 'flex';
+    } else {
+        scrollTopBtn.style.display = 'none';
+    }
+});
+
+document.getElementById('scrollTopBtn').addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

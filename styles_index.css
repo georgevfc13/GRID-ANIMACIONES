@@ -93,3 +93,15 @@ body{
   opacity: 0.7;
   pointer-events: none;
 }
+
+.boton_subir{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
